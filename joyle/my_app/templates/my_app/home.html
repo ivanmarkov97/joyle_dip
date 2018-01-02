@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block content %}
+<p>ALL tasks</p>
+<div>
+	<ul>
+		{% for task in tasks %}
+			<li>
+				<p><b>Name:</b> {{ task.name }}</p>
+				<p>Desription: {{ task.description }}</p>
+				<p>Deadline: {{ task.deadline }}</p>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}
